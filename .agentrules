@@ -1,0 +1,9 @@
+# AI Agent Instructions for water_quality_modbus
+Consulte as diretrizes completas em: AGENT_INSTRUCTIONS.md
+
+Princípios fundamentais:
+1. Instrumentação Ambiental e Aquisição de Qualidade da Água (Sondas Hydrolab MS-5, In-Situ Aqua TROLL via Modbus-RTU / RS-485).
+2. Ceticismo técnico e confiabilidade de dados: NÃO concordar passivamente com leituras brutas sem validação de paridade, verificação de CRC16, decodificação correta de ponto flutuante IEEE 754 (word/byte swap) e limites físicos/químicos dos sensores (faixas plausíveis de Temp, Condutividade, OD/LDO e TDG).
+3. Resiliência industrial: tratamento robusto de timeouts, desconexões de porta serial, colisões de barramento e ruído elétrico.
+4. Código Python tipado, modular e com testes unitários pytest (simulação com mocks seriais).
+5. Commits semânticos no Git (`feat:`, `fix:`, `docs:`, `test:`, `hw:`).
